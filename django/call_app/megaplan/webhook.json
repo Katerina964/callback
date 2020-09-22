@@ -1,0 +1,71 @@
+{
+  "class": "BumsTradeM_Deal",
+  "id": 1,
+  "data": {
+    "deal": {
+      "Id": "1",
+      "GUID": "",
+      "Name": "1",
+      "Description": "",
+      "Contractor": {
+        "Id": 1000002,
+        "Name": "Klient Test"
+      },
+      "TimeCreated": "2020-09-11 16:30:39",
+      "TimeUpdated": "2020-09-16 19:21:37",
+      "Owner": {
+        "Id": 1000003,
+        "Name": "Polytell bot"
+      },
+      "IsDraft": false,
+      "Positions": [],
+      "IsPaid": false,
+      "FinalPrice": {
+        "Value": 0,
+        "Currency": "руб.",
+        "CurrencyId": 1,
+        "CurrencyAbbreviation": "RUR",
+        "Rate": 1
+      },
+      "Program": {
+        "Id": 12,
+        "Name": "Процесс1"
+      },
+      "RelatedObjects": [],
+      "Category1000060CustomFieldVneshtatniySpetsialist": [
+        {
+          "Id": 1000004,
+          "Name": "Товарищ Сотрудник"
+        }
+      ],
+      "Category1000060CustomFieldRezultatZvonka": "Клиент не отвечает",
+      "Auditors": [],
+      "Manager": {
+        "Id": 1000003,
+        "Name": "Polytell bot"
+      },
+      "Status": {
+        "Id": 84,
+        "Name": "Начало"
+      },
+      "ProgramId": 12,
+      "PossibleTransitions": [
+        {
+          "Id": "trans-155",
+          "Name": "Середина",
+          "Comment": "",
+          "Disabled": false,
+          "Destination": {
+            "Id": 85,
+            "Name": "Середина",
+            "EntryPointName": "",
+            "Type": "active",
+            "Color": "#593f3d",
+            "Description": "",
+            "IsEntry": false
+          }
+        }
+      ]
+    }
+  }
+}

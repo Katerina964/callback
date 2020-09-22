@@ -1,0 +1,45 @@
+{% extends 'call_app/base.html' %}
+{% block pagination %} {% endblock %}
+{% block content %}
+
+
+<div>
+
+
+            <div class="call_app">
+            <table  cellpadding="10" border="1" color: blue  width="70%">
+              <tr style="background-color: #c7e7ed;">
+              <th>Время звонка</th>
+              <th>Тип звонка</th>
+              <th>id_звонка</th>
+              <th>Сотрудник</th>
+              <th>Сделка</th>
+              <th>Тип сделки</th>
+              <th>Длительность разговора</th>
+              <th>Ссылка на запись</th>
+              <th>Результат звонка</th>
+              <th>Добавлено в CRM</th>
+
+
+              </tr>
+            {% for call in call_list %}
+                <tr>
+                <td> </td>
+                <td></td>
+                <td>{{call.id}}</td>
+                <td>{{call.employee}}</td>
+                <td>{{call.deal_id_megaplan}}</td>
+                <td>{{call.tipe_of_deal}}</td>
+                <td>{{call.call_len}}</td>
+                <td></td>
+                <td>{{call.result}}</td>
+                <td>{{call.in_crm}}</td>
+
+                <tr>
+            {% endfor %}
+
+            </table>
+            </div>
+
+</div>
+{% endblock %}

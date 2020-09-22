@@ -1,0 +1,29 @@
+version: "3.3"
+services:
+  postgres:
+    image:  postgres:alpine
+    volumes:
+      -  '/postgres'
+    environment:
+       POSTGRES_PASSWORD: password
+       POSTGRES_USER: callproject
+       POSTGRES_DB: callproject-database
+       PGDATA: /postgres/data
+
+  django:
+    image: django
+    build:
+      context: ./django
+      dockerfile: docker/Dockerfile
+    volumes:
+      - './django:/django'
+    depends_on:
+      - postgres
+    ports:
+      - '8080:8080'
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: callproject
+      DB_PASSWORD: password
+      DB_NAME: callproject-database

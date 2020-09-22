@@ -1,0 +1,42 @@
+{% extends 'call_app/base.html' %}
+{% block pagination %} {% endblock %}
+{% block content %}
+
+
+<div>
+
+
+            <div class="form">
+            <form action="{% url 'call_app:index' %}" method="POST" >
+                {% csrf_token %}
+
+                       <table>
+                          {{ form  }}
+                       </table>
+            <button type="button" class="btn btn-outline-info" >Проверить авторизацию</button>
+            </form>
+
+            </div>
+
+
+            <div class="crmaccount">
+            <table  cellpadding="10" border="1" width="50%">
+              <tr style="background-color: #c7e7ed;">
+              <th>NN</th>
+              <th>CRM</th>
+              <th>TOKEN</th>
+
+              </tr>
+            {% for crmaccount in crmaccount_list %}
+                <tr>
+                <td> {{ crmaccount.id }}</td>
+                <td>{{ crmaccount.host }}</td>
+                <td>{{crmaccount.token}}</td>
+                <tr>
+            {% endfor %}
+
+            </table>
+            </div>
+
+</div>
+{% endblock %}
